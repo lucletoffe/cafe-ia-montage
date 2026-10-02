@@ -1,0 +1,187 @@
+{
+ "slug": "2026-09-24-cafe-ia-002",
+ "dir": "~/Files/cafe-ia/2026-09-24-cafe-ia-002",
+ "tracks": [
+  {
+   "wav": "work/track0_luc.wav",
+   "spk": "Luc"
+  },
+  {
+   "wav": "work/track1_baptiste.wav",
+   "spk": "Baptiste"
+  }
+ ],
+ "mix": "2026-09-24-cafe-ia-002-audio-mix.m4a",
+ "videos": {
+  "obs_luc": {
+   "path": "2026-09-24-16-37-31.mkv",
+   "offset": 518.59,
+   "note": "capture OBS de l'écran de Luc (caméra Luc + terminal + Jitsi Baptiste), calée par corrélation, égale à l'horloge murale"
+  }
+ },
+ "layouts": {
+  "long": [
+   {
+    "src": "obs_luc",
+    "vf": "setsar=1"
+   }
+  ],
+  "short": [
+   {
+    "src": "obs_luc",
+    "vf": "crop=600:489:1206:316,scale=1080:880,setsar=1"
+   },
+   {
+    "src": "obs_luc",
+    "vf": "crop=456:372:0:210,scale=1080:880,setsar=1"
+   }
+  ]
+ },
+ "keep": [
+  {
+   "in": 521.0,
+   "out": 785.0,
+   "why": "échange (début de la vidéo OBS ; avant 08:39 audio seul)",
+   "removed_before": "temps mort · installation, avant la vidéo"
+  },
+  {
+   "in": 806.0,
+   "out": 1031.0,
+   "why": "échange",
+   "removed_before": "EXCLUSION · adresse mail à l'écran"
+  },
+  {
+   "in": 1226.0,
+   "out": 2160.0,
+   "why": "échange",
+   "removed_before": "EXCLUSION · extension LinkedIn / CRM : profils, fiche contact, messages clients à l'écran"
+  },
+  {
+   "in": 2178.0,
+   "out": 3420.0,
+   "why": "échange",
+   "removed_before": "EXCLUSION · fiche contact, numéro de téléphone"
+  }
+ ],
+ "exclude": [],
+ "chapters": [
+  {
+   "t": 519,
+   "title": "On lance le café : l'agent doit retrouver le projet"
+  },
+  {
+   "t": 598,
+   "title": "La mémoire branchée aux sessions"
+  },
+  {
+   "t": 824,
+   "title": "La consigne à l'agent"
+  },
+  {
+   "t": 1226,
+   "title": "Herdr : les agents tournent pendant qu'on parle"
+  },
+  {
+   "t": 1353,
+   "title": "On ne bosse pas beaucoup quand on bosse avec des agents"
+  },
+  {
+   "t": 1574,
+   "title": "Documenter, tout logger… et savoir déconnecter"
+  },
+  {
+   "t": 1905,
+   "title": "Ce que l'agent a trouvé tout seul"
+  },
+  {
+   "t": 2067,
+   "title": "Il a retrouvé le post de Baptiste"
+  },
+  {
+   "t": 2384,
+   "title": "« Moi, je préfère taper »"
+  },
+  {
+   "t": 2451,
+   "title": "Pourquoi pas Opus Clip ?"
+  },
+  {
+   "t": 2695,
+   "title": "La ligne éditoriale, dictée par l'agent"
+  },
+  {
+   "t": 2900,
+   "title": "Trouver le prochain créneau"
+  },
+  {
+   "t": 3111,
+   "title": "Le premier montage, et combien ça coûte"
+  },
+  {
+   "t": 3224,
+   "title": "Les repartages LinkedIn, l'IA locale"
+  }
+ ],
+ "short_prefix": "",
+ "shorts": [
+  {
+   "name": "pourquoi-pas-opus-clip",
+   "in": 2451.0,
+   "out": 2494.0,
+   "ligne": "5 reconstruire plutôt qu'empiler · 2 réaction",
+   "hook": "Le plus simple c'est d'utiliser Opus Clip. — Mais pourquoi on n'utilise pas Opus Clip, Baptiste ?"
+  },
+  {
+   "name": "je-jette-mes-logiciels",
+   "in": 2652.0,
+   "out": 2697.0,
+   "ligne": "5 reconstruire ses outils",
+   "hook": "Je jette tous les logiciels que je paye, à part les tokens."
+  },
+  {
+   "name": "fusionner-avec-la-machine",
+   "in": 1771.0,
+   "out": 1822.0,
+   "ligne": "IA outil de travail, pas promesse · 2 réaction",
+   "hook": "Tu veux fusionner avec la machine bientôt, c'est ça ?"
+  },
+  {
+   "name": "quand-je-tape-je-reflechis",
+   "in": 2380.5,
+   "out": 2420.0,
+   "ligne": "3 l'aveu · 2 réaction",
+   "hook": "Moi, je préfère taper. — Incroyable."
+  },
+  {
+   "name": "le-premier-montage",
+   "in": 3119.0,
+   "out": 3169.0,
+   "ligne": "1 le construit devient visible · 2 réaction",
+   "hook": "Est-ce qu'il arrivera à faire des montages intéressants dès le départ ? Je doute."
+  },
+  {
+   "name": "payer-la-semaine",
+   "in": 2106.4,
+   "out": 2148.3,
+   "ligne": "3 le coût réel · relation commerciale",
+   "hook": "Tu m'as dit qu'il fallait une semaine, tu l'as fait en une heure."
+  }
+ ],
+ "segments": [
+  {
+   "path": "2026-09-24-cafe-ia-002-track0-luc-segments.json",
+   "kind": "list",
+   "spk": "Luc"
+  },
+  {
+   "path": "2026-09-24-cafe-ia-002-track1-baptiste-segments.json",
+   "kind": "list",
+   "spk": "Baptiste"
+  }
+ ],
+ "long_suffix": "long-v3",
+ "aligned": [
+  "work/aligned-luc.json",
+  "work/aligned-baptiste.json"
+ ]
+}

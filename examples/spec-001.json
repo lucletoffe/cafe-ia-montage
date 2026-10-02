@@ -1,0 +1,173 @@
+{
+ "slug": "2026-09-18-cafe-ia-001",
+ "dir": "~/Files/cafe-ia/2026-09-18-cafe-ia-001",
+ "tracks": [
+  {
+   "wav": "track0_luc.wav",
+   "spk": "Luc"
+  },
+  {
+   "wav": "track1_baptiste.wav",
+   "spk": "Baptiste"
+  }
+ ],
+ "mix": "2026-09-18-cafe-ia-001-audio-mix.m4a",
+ "videos": {
+  "rec_luc": {
+   "path": "2026-09-18-cafe-ia-001.mp4",
+   "offset": 329.58,
+   "note": "enregistrement OBS de Luc (Baptiste en grand), calé par corrélation 0,874"
+  },
+  "rec_baptiste": {
+   "path": "2026-09-18 09-01-38.mkv",
+   "offset": 313.97,
+   "note": "enregistrement OBS de Baptiste (Luc en grand), calé par corrélation 0,362"
+  }
+ },
+ "layouts": {
+  "long": [
+   {
+    "src": "rec_luc",
+    "vf": "crop=960:1080:390:0,setsar=1"
+   },
+   {
+    "src": "rec_baptiste",
+    "vf": "crop=600:675:327:45,scale=960:1080,setsar=1"
+   }
+  ],
+  "short": [
+   {
+    "src": "rec_luc",
+    "vf": "crop=1100:896:320:60,scale=1080:880,setsar=1"
+   },
+   {
+    "src": "rec_baptiste",
+    "vf": "crop=760:619:247:55,scale=1080:880,setsar=1"
+   }
+  ]
+ },
+ "keep": [
+  {
+   "in": 332.0,
+   "out": 474.6,
+   "why": "échange (début de la vidéo ; avant 05:30 aucune des deux vidéos ne couvre)",
+   "removed_before": "temps mort · connexion, avant la vidéo"
+  },
+  {
+   "in": 498.0,
+   "out": 2305.0,
+   "why": "échange",
+   "removed_before": "EXCLUSION · tiers nommé (démo d'un client), publiable = non tant que non bipé"
+  }
+ ],
+ "exclude_note": "le tiers nommé à 07:3x (démo client) est retiré par EXCLUDE, cf. exclude",
+ "exclude": [],
+ "chapters": [
+  {
+   "t": 330.0,
+   "title": "Pourquoi on se voit à deux pour faire comme si on était avec d'autres ?"
+  },
+  {
+   "t": 541,
+   "title": "Le montage, c'est chiant : automatiser le 80/20"
+  },
+  {
+   "t": 824,
+   "title": "Tous les outils existent déjà sur nos machines"
+  },
+  {
+   "t": 965,
+   "title": "Différenciation, open source et ego"
+  },
+  {
+   "t": 1077,
+   "title": "Le transcript comme matière première"
+  },
+  {
+   "t": 1175,
+   "title": "Pourquoi ne pas payer 20 € par mois ?"
+  },
+  {
+   "t": 1251,
+   "title": "« La plupart des codes que j'ai faits, tout le monde s'en fout »"
+  },
+  {
+   "t": 1311,
+   "title": "Un logiciel pour soi seul : le changement de paradigme"
+  },
+  {
+   "t": 1423,
+   "title": "Les angles morts selon ChatGPT"
+  },
+  {
+   "t": 1518,
+   "title": "« Tu m'as dit une semaine, tu l'as fait en une heure »"
+  },
+  {
+   "t": 1668,
+   "title": "Du « c'est une idée » au « c'est possible »"
+  },
+  {
+   "t": 1921,
+   "title": "La cible, c'est nous"
+  },
+  {
+   "t": 1951,
+   "title": "Capture, compréhension, sélection… plus besoin du scribe"
+  },
+  {
+   "t": 2117,
+   "title": "Une demi-heure par semaine"
+  },
+  {
+   "t": 2160,
+   "title": "Travailler entre les cafés ?"
+  },
+  {
+   "t": 2213,
+   "title": "Le prochain rendez-vous"
+  }
+ ],
+ "short_prefix": "v2-",
+ "shorts": [
+  {
+   "name": "on-sen-fout",
+   "in": 1026.0,
+   "out": 1060.8,
+   "ligne": "2 réaction · 5 reconstruire plutôt que débattre",
+   "hook": "Et puis j'ai plus raison sur la philo… — Alors je te propose qu'on s'en foute."
+  },
+  {
+   "name": "empiler-les-abonnements",
+   "in": 1181.2,
+   "out": 1208.8,
+   "ligne": "5 reconstruire ses outils plutôt qu'empiler les abonnements",
+   "hook": "Est-ce que c'est bien la peine qu'on s'embête à deux alors qu'à 20 balles par mois c'est résolu ?"
+  },
+  {
+   "name": "un-logiciel-pour-soi",
+   "in": 1311.0,
+   "out": 1357.0,
+   "ligne": "5 · 4 le chemin",
+   "hook": "L'IA change de paradigme : tu crées ton logiciel pour toi seul."
+  },
+  {
+   "name": "plus-besoin-du-scribe",
+   "in": 2050.0,
+   "out": 2097.2,
+   "ligne": "4 le chemin · 1 le construit devient visible",
+   "hook": "Vous avez déjà 30 minutes de conversation : demandez à votre système 3 clips."
+  }
+ ],
+ "segments": [
+  {
+   "path": "work/server-transcript.json",
+   "kind": "timeline"
+  }
+ ],
+ "long_suffix": "long-v3",
+ "aligned": [
+  "work/aligned-luc.json",
+  "work/aligned-baptiste.json"
+ ]
+}

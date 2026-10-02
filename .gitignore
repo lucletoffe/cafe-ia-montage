@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+work/
+montages/
+*.mp4
+*.mka
+*.wav
