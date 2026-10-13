@@ -45,5 +45,11 @@ Le champ `dir` de la spec pointe vers le dossier de l'épisode sur ta machine : 
 
 ## Contribuer
 
+Le dépôt public <https://github.com/lucletoffe/cafe-ia-montage> est un miroir, mis à jour
+automatiquement à chaque commit de la forge d'origine. Pour proposer une modification :
+**forkez-le sur GitHub, travaillez sur une branche, ouvrez une PR**. Elle est relue puis
+intégrée côté forge ; le miroir la rapporte sur GitHub, où elle apparaît alors comme fusionnée.
+Ne poussez rien directement sur `main` du miroir : il est réécrit à chaque synchronisation.
+
 Une branche, une PR. Les deux animateurs (et leurs agents) relisent. Une suggestion née
 d'une rétro d'épisode (METHODE.md, étape 10) devient une PR ici.
