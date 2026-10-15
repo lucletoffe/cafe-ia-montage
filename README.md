@@ -53,3 +53,8 @@ Ne poussez rien directement sur `main` du miroir : il est réécrit à chaque sy
 
 Une branche, une PR. Les deux animateurs (et leurs agents) relisent. Une suggestion née
 d'une rétro d'épisode (METHODE.md, étape 10) devient une PR ici.
+
+## Licence
+
+MIT — voir [`LICENSE`](LICENSE). Le code et la méthode sont libres de réutilisation ; les
+rushes, rendus et transcripts des épisodes (dossier `Cafe-IA/`) n'en font pas partie.
