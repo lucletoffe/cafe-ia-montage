@@ -29,6 +29,10 @@ N    best-of par catégorie depuis le catalogue des moments
 Aucune validation humaine entre 2 et 8 : monter coûte peu et se refait. La surface de
 revue, ce sont les rendus et le doc d'épisode. La seule barrière est la publication.
 
+**On ne publie que depuis `montages/`.** Un brut (composite, piste d'écran partagé,
+piste caméra) ne se publie jamais tel quel, même pour aller vite : il contient tout ce
+qui est passé à l'écran, y compris ce que les rendus ont coupé ou flouté.
+
 ## Où vivent les choses
 
 | Quoi | Où |
@@ -78,6 +82,14 @@ cadrée pour le vertical ; #3 caméra figée et partage d'écran noir.
    des enveloppes audio (ou par le clap) — l'horloge murale seule se trompe de quelques
    centaines de ms. Noter l'offset de chaque flux.
 4. Flux incomplet → mode dégradé, le dire dans le doc d'épisode.
+5. **Planche de l'écran partagé**, pour chaque piste d'écran : une image toutes les 5 s et
+   à chaque changement d'écran, regardées **toutes** (2 min de partage ≈ 25 images). Tout
+   passage qui montre une interface d'administration, une liste de personnes, une adresse
+   e-mail, un lien ou un jeton d'accès, un document client → plage `ecran-sensible`
+   dans `work/sources.json`, coupée ou floutée dans **tous** les rendus. Un lien ou un
+   jeton d'accès vu à l'écran se signale tout de suite aux animateurs : il se régénère,
+   même si les rendus le floutent, puisque le brut le garde. Une détection automatique
+   (OCR) peut aider à repérer, jamais remplacer la planche.
 
 ## Étape 3 — Deux transcripts : lisible et verbatim
 
@@ -183,8 +195,9 @@ vignette du locuteur. **Rendu** : loudnorm I=−14 LUFS, TP=−1 ; chapitres ; `
 
 Pour chaque rendu : `ffprobe` (durée, pistes) ; audio non muet ; `ebur128` à ±1 LU de la
 cible ; `blackdetect` vide ; images extraites à chaque coupe et **regardées** (cadrage,
-visage entier, sous-titres en zone sûre, aucun écran sensible) ; re-transcription du rendu
-pour vérifier qu'aucune phrase n'est tronquée. Un échec corrige l'EDL et relance le rendu.
+visage entier, sous-titres en zone sûre) ; pour chaque plage `ecran-sensible` gardée dans
+le rendu, une image toutes les 5 s **à l'intérieur** de la plage, regardée : rien n'y est
+lisible ; re-transcription du rendu pour vérifier qu'aucune phrase n'est tronquée. Un échec corrige l'EDL et relance le rendu.
 On ne livre jamais un rendu en échec.
 
 ## Étape 8 — Livraison
